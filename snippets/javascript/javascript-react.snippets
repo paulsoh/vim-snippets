@@ -41,13 +41,39 @@ snippet pt
 		${1}: React.PropTypes.${2:type},
 	}
 snippet rcc
-	class ${1:ClassName} extends React.Component {
+	import React from 'react'
+
+
+	export default class ${1:} extends React.Component {
 		render() {
 			return (
-				${0:<div />}
+				<div>
+					$1
+				</div>
 			);
 		}
 	}
+snippet rfc
+	import React from 'react'
+
+
+	const ${1} = (props) => {
+		return (
+			<div>
+				$1
+			</div>
+		)
+	}
+
+	export default $1;
+snippet divcn
+	<div className="${1}">
+	<div>
+snippet divcnn
+	<div
+		className="${1}"
+	>
+	<div>
 snippet rdr
 	ReactDOM.render(${1}, ${2})
 snippet ercc
@@ -59,8 +85,8 @@ snippet ercc
 		}
 	}
 snippet ctor
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		${1}
 	}
 snippet ren
